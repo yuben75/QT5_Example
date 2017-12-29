@@ -40,7 +40,7 @@
 
 
 #include "mymodel.h"
-
+#include <QDebug>
 
 MyModel::MyModel(QObject *parent)
     :QAbstractTableModel(parent)
@@ -75,6 +75,8 @@ bool MyModel::setData(const QModelIndex & index, const QVariant & value, int rol
 {
     if (role == Qt::EditRole)
     {
+        qDebug() << "value:string=" << value.toString();
+
         //save value from editor to member m_gridData
         m_gridData[index.row()][index.column()] = value.toString();
         //for presentation purposes only: build and emit a joined string
