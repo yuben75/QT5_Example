@@ -75,7 +75,7 @@ bool MyModel::setData(const QModelIndex & index, const QVariant & value, int rol
 {
     if (role == Qt::EditRole)
     {
-        qDebug() << "value:string=" << value.toString();
+        qDebug() << "row=" << index.row() << ", col=" << index.column() << ", value:string=" << value.toString();
 
         //save value from editor to member m_gridData
         m_gridData[index.row()][index.column()] = value.toString();

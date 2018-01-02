@@ -45,11 +45,15 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    tableView = new QTableView(this);
-    setCentralWidget(tableView);
     QAbstractTableModel *myModel = new MyModel(this);
+#if 1
+    tableView = new QTableView(this);
     tableView->setModel(myModel);
-
+#else
+    lineEdit = new QLineEdit(this);
+    lineEdit->setModel(myModel);
+#endif
+    setCentralWidget(tableView);
     //transfer changes to the model to the window title
     connect(myModel, SIGNAL(editCompleted(const QString &)), this, SLOT(setWindowTitle(const QString &)));
 }
