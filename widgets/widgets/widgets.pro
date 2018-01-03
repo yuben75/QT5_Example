@@ -16,8 +16,8 @@ SUBDIRS       = analogclock \
                 #shapedclock \
                 #sliders \
                 #spinboxes \
-                #styles \
-                #stylesheet \
+                styles \
+                stylesheet \
                 #tablet \
                 #tetrix \
                 #tooltips \
