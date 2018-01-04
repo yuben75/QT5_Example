@@ -11,7 +11,7 @@ SUBDIRS       = \
                 #effects \
                 #gestures \
                 #graphicsview \
-                itemviews \
+                #itemviews \
                 #layouts \
                 #mainwindows \
                 #painting \
@@ -19,7 +19,7 @@ SUBDIRS       = \
                 #scroller \
                 #statemachine \
                 #tools \
-                tutorials \
+                #tutorials \
                 widgets
 
 contains(QT_CONFIG, opengl(es2)?) {
